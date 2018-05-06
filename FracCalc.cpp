@@ -35,13 +35,13 @@ NowCoder最近要处理很多金融问题，这些账目不允许出现精度丢
 #include <cmath>
 using namespace std;
 
-int gcd(int a, int b) {
+inline int gcd(int a, int b) {
     if (b == 0)
         return a;
     return gcd(b, a % b);
 }
 
-void simplize(int *numerator, int *denominator) {
+inline void simplize(int *numerator, int *denominator) {
     int sign = 1;
     if (*numerator < 0 && *denominator > 0 || *numerator > 0 && *denominator < 0)
         sign = -1;
